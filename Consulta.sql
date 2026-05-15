@@ -1,5 +1,3 @@
-CREATE DATABASE IF NOT EXISTS biblioteca;
- 
 USE biblioteca;
  
 CREATE TABLE IF NOT EXISTS usuarios (
@@ -29,5 +27,7 @@ CREATE TABLE IF NOT EXISTS alugueis (
     FOREIGN KEY (id_livro) REFERENCES livros(id)
 );
 
-INSERT INTO usuarios (nome, email, senha)
-VALUES ('Usuário Senac', 'senac@gmail.com', '$2y$10$NcqKM1CVjaisA9YG2Kq8AeLhXVhP5pwtluO4qXy1Et4h0WpxV.8z2');
+INSERT INTO usuarios (email, senha)
+VALUES ('senac@gmail.com', '123456');
+
+SELECT * FROM usuarios
